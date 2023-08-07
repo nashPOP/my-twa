@@ -11,7 +11,7 @@ function App() {
         <TonConnectButton />
 
         <div className='Card'>
-          <b>Counter Address</b>
+          <b>Counter Addresstesteee</b>
           <div className='Hint'>{address?.slice(0, 30) + '...'}</div>
         </div>
 
