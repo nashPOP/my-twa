@@ -1,35 +1,38 @@
 {
-  "name": "my-twa",
-  "private": true,
+  "name": "tonstake-twa",
   "version": "0.0.0",
-  "type": "module",
+  "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "build": "run-p type-check build-only",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
   },
   "dependencies": {
-    "@orbs-network/ton-access": "^2.3.3",
-    "@tonconnect/ui-react": "^1.0.0-beta.6",
-    "@twa-dev/sdk": "^6.7.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "ton": "^13.5.0",
-    "ton-core": "^0.50.0",
-    "ton-crypto": "^3.2.0",
-    "vite-plugin-node-polyfills": "^0.9.0"
+    "@popperjs/core": "^2.11.8",
+    "@twa.js/sdk": "^0.7.0",
+    "bootstrap": "^5.3.1",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
   },
   "devDependencies": {
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "@vitejs/plugin-react": "^4.0.3",
+    "@rushstack/eslint-patch": "^1.3.2",
+    "@tsconfig/node18": "^18.2.0",
+    "@types/node": "^18.17.0",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/eslint-config-prettier": "^8.0.0",
+    "@vue/eslint-config-typescript": "^11.0.3",
+    "@vue/tsconfig": "^0.4.0",
     "eslint": "^8.45.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.3",
-    "typescript": "^5.0.2",
-    "vite": "^4.4.5"
+    "eslint-plugin-vue": "^9.15.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.0.0",
+    "sass": "^1.64.2",
+    "typescript": "~5.1.6",
+    "vite": "^4.4.6",
+    "vue-tsc": "^1.8.6"
   }
 }
