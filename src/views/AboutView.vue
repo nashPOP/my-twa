@@ -4,6 +4,14 @@
   </div>
 </template>
 
+<script setup lang="ts">
+import {BackButton } from '@twa.js/sdk';
+// console.log();
+const backbutton = new BackButton("6.2");
+// console.log(backbutton);
+// backbutton.show();
+backbutton.show()
+</script>
 <style>
 @media (min-width: 1024px) {
   .about {
