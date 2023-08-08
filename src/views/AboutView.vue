@@ -6,10 +6,14 @@
 
 <script setup lang="ts">
 import {BackButton } from '@twa.js/sdk';
-// console.log();
+import {useRouter} from 'vue-router'
+const router = useRouter();
 const backbutton = new BackButton("6.2");
 // console.log(backbutton);
 // backbutton.show();
+backbutton.on('click',()=>{
+  router.back();
+})
 backbutton.show()
 </script>
 <style>
