@@ -18,4 +18,8 @@ onMounted(() => {
 body {
   font-family: 'SF Pro Display', sans-serif;
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
 </style>
