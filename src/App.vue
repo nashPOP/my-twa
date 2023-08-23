@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 // import { echarts } from "@/utils/echarts.js"; // 按需引入echarts
 
 import { onMounted } from 'vue';

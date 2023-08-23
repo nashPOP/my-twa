@@ -1,8 +1,8 @@
 <script setup lang="ts">
-// import { BackButton } from '@twa.js/sdk';
+import { BackButton } from '@twa.js/sdk';
 
-// const backbutton = new BackButton("6.2");
-// backbutton.hide()
+const backbutton = new BackButton("6.2");
+backbutton.hide()
 
 </script>
 <template>

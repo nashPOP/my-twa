@@ -90,14 +90,14 @@
 
 import { BackButton } from '@twa.js/sdk';
 import { useRouter } from 'vue-router'
-// const router = useRouter();
-// const backbutton = new BackButton("6.2");
+const router = useRouter();
+const backbutton = new BackButton("6.2");
 
-// backbutton.show();
-// backbutton.on('click', () => {
-//     router.back();
-// })
-// backbutton.show()
+backbutton.show();
+backbutton.on('click', () => {
+    router.back();
+})
+backbutton.show()
 </script>
 <style>
 @media (min-width: 1024px) {
