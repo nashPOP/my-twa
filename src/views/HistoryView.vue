@@ -86,7 +86,7 @@
     </div>
 </template>
 
-<script  lang="ts">
+<script setup lang="ts">
 
 import { BackButton } from '@twa.js/sdk';
 import { useRouter } from 'vue-router'
