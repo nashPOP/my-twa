@@ -4,27 +4,18 @@
   </div>
 </template>
 
-<script  lang="ts">
+<script setup lang="ts">
 
 import NoInfo from '@/components/NoInfo.vue';
 import { BackButton } from '@twa.js/sdk';
 import { useRouter } from 'vue-router'
 const router = useRouter();
 const backbutton = new BackButton("6.2");
-export default {
-  components: {
-    NoInfo,
-  },
-  setup() {
-    backbutton.show();
-    backbutton.on('click', () => {
-      router.back();
-    })
-    backbutton.show()
-  }
-}
-
-
+backbutton.show();
+backbutton.on('click', () => {
+  router.back();
+})
+backbutton.show()
 
 </script>
 <style>
