@@ -1,27 +1,29 @@
 <template>
     <div>
         <div class="fs-18 text-gray ms-3 pt-3">YOUR STAKE</div>
-        <div v-for="index in 10" :key="index" style="border-bottom: 1px solid #ffffff13;"
-            class="d-flex justify-content-between align-items-center my-4 mx-3 ">
-            <div class="d-flex align-items-center pb-2">
-                <div style="width: 36px; height: 36px;"
-                    class="d-flex align-items-center rounded-circle bg-lightblack5 p-1 me-2">
-                    <svg class="mx-2" width="18" height="18" viewBox="0 0 18 18" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M8.29289 0.292893C8.68342 -0.0976311 9.31658 -0.0976311 9.70711 0.292893L17.2071 7.79289C17.5976 8.18342 17.5976 8.81658 17.2071 9.20711C16.8166 9.59763 16.1834 9.59763 15.7929 9.20711L10 3.41421V19C10 19.5523 9.55229 20 9 20C8.44772 20 8 19.5523 8 19V3.41421L2.20711 9.20711C1.81658 9.59763 1.18342 9.59763 0.792893 9.20711C0.402369 8.81658 0.402369 8.18342 0.792893 7.79289L8.29289 0.292893Z"
-                            fill="white" />
-                    </svg>
+        <div style="padding-bottom: 60px;">
+            <div v-for="index in 10" :key="index" style="border-bottom: 1px solid #ffffff13;"
+                class="d-flex justify-content-between align-items-center my-4 mx-3  ">
+                <div class="d-flex align-items-center pb-2">
+                    <div style="width: 36px; height: 36px;"
+                        class="d-flex align-items-center rounded-circle bg-lightblack5 p-1 me-2">
+                        <svg class="mx-2" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8.29289 0.292893C8.68342 -0.0976311 9.31658 -0.0976311 9.70711 0.292893L17.2071 7.79289C17.5976 8.18342 17.5976 8.81658 17.2071 9.20711C16.8166 9.59763 16.1834 9.59763 15.7929 9.20711L10 3.41421V19C10 19.5523 9.55229 20 9 20C8.44772 20 8 19.5523 8 19V3.41421L2.20711 9.20711C1.81658 9.59763 1.18342 9.59763 0.792893 9.20711C0.402369 8.81658 0.402369 8.18342 0.792893 7.79289L8.29289 0.292893Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <div>Staked</div>
                 </div>
-                <div>Staked</div>
-            </div>
-            <div class="d-flex">
-                <div>25.759</div>
-                <img class="ms-2" src="@/assets/icon/toncoin_icon.svg" alt="">
+                <div class="d-flex">
+                    <div>25.759</div>
+                    <img class="ms-2" src="@/assets/icon/toncoin_icon.svg" alt="">
+                </div>
             </div>
         </div>
         <div style="border-top:1px solid #ffffff13; position: fixed;bottom: 0;"
-            class="w-100 justify-content-between mx-3 pt-2">
+            class="w-100 justify-content-between bg-light pt-2">
             <div class="d-flex  justify-content-around">
                 <div class="text-center">
                     <img class="text-center" src="@/assets/icon/clock_icon.svg">
@@ -87,17 +89,16 @@
 </template>
 
 <script setup lang="ts">
-
 import { BackButton } from '@twa.js/sdk';
 import { useRouter } from 'vue-router'
-const router = useRouter();
-const backbutton = new BackButton("6.2");
+// const router = useRouter();
+// const backbutton = new BackButton("6.2");
 
-backbutton.show();
-backbutton.on('click', () => {
-    router.back();
-})
-backbutton.show()
+// backbutton.show();
+// backbutton.on('click', () => {
+//     router.back();
+// })
+// backbutton.show()
 </script>
 <style>
 @media (min-width: 1024px) {
