@@ -1,4 +1,6 @@
-<script setup lang="ts">
+<script setup>
+// import { echarts } from "@/utils/echarts.js"; // 按需引入echarts
+
 import { onMounted } from 'vue';
 import { RouterView } from 'vue-router'
 onMounted(() => {
@@ -6,6 +8,7 @@ onMounted(() => {
 
 })
 </script>
+
 <template >
   <div style="min-height: 100vh;" class="bg-white p-0">
     <RouterView />
