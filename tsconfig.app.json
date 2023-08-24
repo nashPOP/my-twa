@@ -10,7 +10,6 @@
   ],
   "compilerOptions": {
     "composite": true,
-    "allowJs": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [

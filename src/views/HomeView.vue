@@ -1,9 +1,13 @@
 <script setup lang="ts">
+
 import { BackButton } from '@twa.js/sdk';
+import { inject } from "vue"
+const test = inject("test");
+if (!test) {
 
-const backbutton = new BackButton("6.2");
-backbutton.hide()
-
+  const backbutton = new BackButton("6.2");
+  backbutton.hide()
+}
 </script>
 <template>
   <div class="text-center py-3">
@@ -58,10 +62,10 @@ backbutton.hide()
       <div class="fs-20 text-skyblue">+0.000 TON </div>
     </div>
     <div class="d-flex justify-content-between align-items-center mx-5 mt-3 px-3">
-      <div>
+      <router-link to="/SignIn">
         <div><img src="@/assets/icon/deposit_icon.svg" alt=""></div>
         <div class="text-gray fs-12 mt-2">Deposit</div>
-      </div>
+      </router-link>
       <div>
         <div><img src="@/assets/icon/withdraw_icon.svg" alt=""></div>
         <div class="text-gray fs-12 mt-2">Withdraw</div>
@@ -113,3 +117,8 @@ backbutton.hide()
     </div>
   </div>
 </template>
+<style>
+a {
+  text-decoration: none;
+}
+</style>

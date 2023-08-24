@@ -1,8 +1,9 @@
 <script setup lang="ts">
 // import { echarts } from "@/utils/echarts.js"; // 按需引入echarts
-
+import { provide } from 'vue';
 import { onMounted } from 'vue';
 import { RouterView } from 'vue-router'
+provide('test', false)
 onMounted(() => {
   document.documentElement.setAttribute("data-theme", "dark");
 

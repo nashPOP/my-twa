@@ -18,13 +18,29 @@ const router = createRouter({
       component: () => import('../views/RingView.vue')
     },
     {
+      path: '/signIn',
+      name: 'signIn',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/SignInView.vue')
+    },
+    {
       path: '/history',
       name: 'history',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/HistoryView.vue')
-    }
+    },
+    {
+      path: '/wellcome',
+      name: 'wellcome',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/WellcomeView.vue')
+    },
   ]
 })
 
