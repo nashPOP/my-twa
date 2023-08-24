@@ -62,7 +62,7 @@ if (!test) {
       <div class="fs-20 text-skyblue">+0.000 TON </div>
     </div>
     <div class="d-flex justify-content-between align-items-center mx-5 mt-3 px-3">
-      <router-link to="/SignIn">
+      <router-link to="/wellcome">
         <div><img src="@/assets/icon/deposit_icon.svg" alt=""></div>
         <div class="text-gray fs-12 mt-2">Deposit</div>
       </router-link>
