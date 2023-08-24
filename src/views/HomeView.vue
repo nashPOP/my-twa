@@ -66,10 +66,10 @@ backbutton.hide()
         <div><img src="@/assets/icon/withdraw_icon.svg" alt=""></div>
         <div class="text-gray fs-12 mt-2">Withdraw</div>
       </div>
-      <div>
+      <router-link to="/history" class="text-decoration-none">
         <div><img src="@/assets/icon/history_icon.svg" alt=""></div>
-        <div class="text-gray fs-12 mt-2">History</div>
-      </div>
+        <div class="text-gray fs-12 mt-2 ">History</div>
+      </router-link>
       <div>
         <div><img src="@/assets/icon/personal_icon.svg" alt=""></div>
         <div class="text-gray fs-12 mt-2">Personal</div>
