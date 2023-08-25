@@ -76,7 +76,7 @@
             <div class="text-dark t fs-20 fw-bold">Sign in</div>
             <input class="form-control my-3" type="text" placeholder="Email" />
             <input class="form-control my-3" type="password" placeholder="Password" />
-            <button class="bg-gray1 fs-14">SIGN IN</button>
+            <button class="bg-skyblue fs-14">SIGN IN</button>
             <!-- <div class="text-danger py-2 text-start">
                 * Account or password is wrong,
                 Please retry.
@@ -91,24 +91,12 @@
                     </router-link>
                 </div>
             </div>
-
-            <div class="d-flex justify-content-center align-items-center  border-top mt-1">
-                <div class="text-gray mb-2">
-                    <div>or</div>
-                </div>
-            </div>
-            <div class="mt-2">
-                <button class="bg-skyblue fs-14">
-                    Connect Wallet
-                </button>
-            </div>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
 
-import NoInfo from '@/components/NoInfo.vue';
 import { BackButton } from '@twa.js/sdk';
 import { useRouter } from 'vue-router'
 import { inject } from "vue"
