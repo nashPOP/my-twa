@@ -1,8 +1,8 @@
-<!-- <template>
+<template>
   <div class="echart" ref="chartDom"></div>
 </template>
 
-<script setup lang="js">
+<script setup>
 //按需导入需要用到的 vue函数 和 echarts
 import {
   ref,
@@ -65,4 +65,4 @@ watch(
   width: 100%;
   height: 100%;
 }
-</style> -->
+</style>

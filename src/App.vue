@@ -1,8 +1,10 @@
-<script setup lang="ts">
+<script setup >
 // import { echarts } from "@/utils/echarts.js"; // 按需引入echarts
 import { provide } from 'vue';
 import { onMounted } from 'vue';
 import { RouterView } from 'vue-router'
+import WalletModal from "@/components/WalletModal.vue"
+
 provide('test', false)
 onMounted(() => {
   document.documentElement.setAttribute("data-theme", "dark");
@@ -13,6 +15,7 @@ onMounted(() => {
 <template >
   <div style="min-height: 100vh;" class="bg-white p-0">
     <RouterView />
+    <WalletModal></WalletModal>
   </div>
 </template>
 

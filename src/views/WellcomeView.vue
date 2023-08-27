@@ -44,10 +44,17 @@
                 </div>
             </div>
             <div class="mx-2 mt-3">
-                <button class="btn bg-skyblue w-100 ">
+                <button @click="openWalletModal" class="btn bg-skyblue w-100 ">
                     Connect wallet
                 </button>
             </div>
         </div>
     </div>
 </template>
+<script setup>
+import { openModal } from "../utils/Utils.js"
+const openWalletModal = () => {
+    console.log(123);
+    openModal("walletSwitchModal")
+}
+</script>
