@@ -30,7 +30,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="border-0 mt-3 w-100 cursor-pointer text-gray" data-bs-dismiss="modal"
+                        <div class="border-0 mt-3 w-100 cursor-pointer text-gray text-center" data-bs-dismiss="modal"
                             data-bs-target="#walletSwitchModal">
                             Close
                         </div>
@@ -41,15 +41,9 @@
         <div id="QrCodeModal" class="modal fade static" tabindex="-1" aria-hidden="true" data-bs-backdrop="static"
             data-bs-keyboard="false">
             <div class="modal-dialog modal-dialog-centered qrcode-Modal">
-                <div class="modal-content">
-                    <div class="modal-body py-5">
+                <div class="modal-content bg-lightblack5">
+                    <div class="modal-body text-center border-radius-25 py-5">
                         <QrcodeVue v-if="qrCodeLink" class="mt-2" :value="qrCodeLink" :size="'220'"></QrcodeVue>
-                        <!-- <QrcodeVue
-              class="mobile-noShow"
-              :value="qrCodeLink"
-              size="220"
-              level="H"
-            /> -->
                         <div class="text-dark textQRcode mobile-noShow">
                             Scan the QR code with your phone’s camera
                         </div>
@@ -58,7 +52,7 @@
                             Go to Tonkeeper
                         </a>
                         <div class="text-dark textQRcode" />
-                        <button type="button" class="btn btn-outline-secondary form-control rounded-pill mt-3"
+                        <button type="button" class="btn btn-outline-secondary form-control rounded-pill mt-3 text-center"
                             data-bs-dismiss="modal" data-bs-target="#QrCodeModal">
                             Close
                         </button>
@@ -88,9 +82,8 @@ onMounted(async () => {
             return res.filter(
                 (a) =>
                     a.name == "Tonkeeper" ||
-                    a.name == "Tonhub" ||
-                    a.name == "MyTonWallet" ||
-                    a.name == "OpenMask"
+                    a.name == "Tonhub"
+
             );
         })
     );
