@@ -53,8 +53,21 @@
 </template>
 <script setup>
 import { openModal } from "../utils/Utils.js"
+import { BackButton } from '@twa.js/sdk';
+import { useRouter } from 'vue-router'
+import { inject } from "vue"
+const test = inject("test");
+if (!test) {
+    const router = useRouter();
+    const backbutton = new BackButton("6.2");
+    backbutton.show();
+    backbutton.on('click', () => {
+        router.back();
+    })
+    backbutton.show()
+
+}
 const openWalletModal = () => {
-    console.log(123);
     openModal("walletSwitchModal")
 }
 </script>
