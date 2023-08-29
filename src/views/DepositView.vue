@@ -98,9 +98,15 @@ if (!test) {
 const changePageType = (val: string) => {
     pageType.value = val;
     if (val == "stakeConfirm") {
+        backbutton.off("click", () => { });
         backbutton.on('click', () => {
             alert("123");
             changePageType("stake")
+        })
+    } else {
+        backbutton.off("click", () => { });
+        backbutton.on('click', () => {
+            router.back();
         })
     }
 }
