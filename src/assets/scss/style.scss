@@ -139,6 +139,10 @@ $baby-blue: #0088cc;
   background-color: var(--skyblue) !important;
 }
 
+.bg-lightblue {
+  background-color: var(--lightblue) !important;
+}
+
 .bg-darkblue {
   background-color: var(--darkblue);
 }
@@ -149,6 +153,10 @@ $baby-blue: #0088cc;
 
 .text-lightgray {
   color: var(--lightgray);
+}
+
+.text-lightblack2{
+  color: var(--lightblack2);
 }
 
 .text-lightblue {
@@ -195,9 +203,6 @@ $baby-blue: #0088cc;
   background-color: $baby-blue;
 }
 
-// .text-gray {
-//   color: #6d7074;
-// }
 
 .text-babyblue {
   color: $baby-blue;
@@ -211,8 +216,16 @@ $baby-blue: #0088cc;
   color: #ff5e5d;
 }
 
+.fs-54 {
+  font-size: 54px;
+}
+
 .fs-48 {
   font-size: 48px;
+}
+
+.fs-36 {
+  font-size: 36px;
 }
 
 .fs-32 {
