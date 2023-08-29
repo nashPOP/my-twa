@@ -99,6 +99,7 @@ const changePageType = (val: string) => {
     pageType.value = val;
     if (val == "stakeConfirm") {
         backbutton.on('click', () => {
+            alert("123");
             changePageType("stake")
         })
     }
