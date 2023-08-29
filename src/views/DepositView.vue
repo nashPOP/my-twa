@@ -1,5 +1,5 @@
 <template>
-    <div v-if="isCheckStakePage === true" style="min-height: 100vh;" class="d-flex row align-content-between">
+    <div v-if="pageType === 'stakePage'" style="min-height: 100vh;" class="d-flex row align-content-between">
         <div class="p-3">
             <div>
                 <div class="d-flex">
