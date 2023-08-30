@@ -68,7 +68,7 @@ const changePageType = (val: string) => {
         setTimeout(() => { isStakeAmountPass.value = true }, 1000)
     } else {
         pageType.value = val;
-
+        router.push("/withdrawDone")
     }
 }
 </script>

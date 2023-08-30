@@ -47,7 +47,15 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/DepositView.vue')
+      component: () => import('../views/Deposit/DepositView.vue')
+    },
+    {
+      path: '/depositDone',
+      name: 'depositDone',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/Deposit/DepositDoneView.vue')
     },
     {
       path: '/withdraw',
@@ -55,7 +63,15 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/WithdrawView.vue')
+      component: () => import('../views/Withdraw/WithdrawView.vue')
+    },
+    {
+      path: '/withdrawDone',
+      name: 'withdrawDone',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/Withdraw/WithdrawDone.vue')
     },
   ]
 })
