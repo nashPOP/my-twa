@@ -7,10 +7,11 @@
                     <div class="text-dark fs-16 mt-2 ms-2">Deposit</div>
                 </div>
                 <div class="text-start my-2">
-                    <span class="text-skyblue">Your wallet :</span> 45,450.00 TON
+                    <span class="text-skyblue">Your wallet :</span> {{ userAmount }} TON
                 </div>
                 <div class="text-start d-flex align-items-center">
-                    <input class="bg-white text-dark border-0 fs-54 w-100" v-model="amount">
+                    <input :class="isStakeAmountPass ? '' : 'shake'" class="bg-white text-dark border-0 fs-54 w-100"
+                        v-model="stakeAmount">
                     <div style="color: #C8C7CB66;" class="fs-36">TON</div>
                 </div>
                 <div class="fs-20 text-lightblack2">
@@ -37,7 +38,7 @@
                         </svg>
                         <span class="ms-2">Deposit</span>
                     </div>
-                    <div>{{ amount }}<img class="ms-2" src="@/assets/icon/toncoin_icon.svg"></div>
+                    <div>{{ stakeAmount }}<img class="ms-2" src="@/assets/icon/toncoin_icon.svg"></div>
                 </div>
                 <div class="text-start d-flex align-items-center justify-content-between fs-16 mt-3">
                     <div>
@@ -48,10 +49,10 @@
                         </svg>
                         <span class="ms-2">Fee</span>
                     </div>
-                    <div>{{ amount }}<img class="ms-2" src="@/assets/icon/toncoin_icon.svg"></div>
+                    <div>{{ stakeAmount }}<img class="ms-2" src="@/assets/icon/toncoin_icon.svg"></div>
                 </div>
                 <div class="mt-1 text-gray">
-                    Your amount need to get though Scheduled to stake, and start stake Our fee is from.
+                    Your stakeAmount need to get though Scheduled to stake, and start stake Our fee is from.
                 </div>
             </div>
         </div>
@@ -84,20 +85,15 @@ import { BackButton } from '@twa.js/sdk';
 import { useRouter } from 'vue-router'
 import { inject } from "vue"
 const test = inject("test");
-const amount = ref(0);
+const userAmount = ref(1234);
+const stakeAmount = ref(0);
+const isStakeAmountPass = ref(true);
 const pageType = ref("stakePage")
 const router = useRouter();
 const backbutton = new BackButton("6.2");
 if (!test) {
     backbutton.show();
-    backbutton.on('click', () => {
-        router.back();
-    })
-    backbutton.show()
-}
-const changePageType = (val: string) => {
-    pageType.value = val;
-    if (val == "stakeConfirm") {
+    if (pageType.value == "stakeConfirm") {
         backbutton.off("click", () => { });
         backbutton.on('click', () => {
             alert("123");
@@ -110,8 +106,54 @@ const changePageType = (val: string) => {
         })
     }
 }
+const changePageType = (val: string) => {
+    if (userAmount.value < stakeAmount.value || stakeAmount.value <= 0) {
+        isStakeAmountPass.value = false;
+        setTimeout(() => { isStakeAmountPass.value = true }, 1000)
+    } else {
+        pageType.value = val;
+
+    }
+}
 </script>
 <style>
+.shake {
+    animation: shake 800ms ease-in-out;
+    color: red !important;
+}
+
+@keyframes shake {
+
+    /* 水平抖动，核心代码 */
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(+2px, 0, 0);
+    }
+
+    30%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(+4px, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    100% {
+        color: var(--dark);
+    }
+}
+
 @media (min-width: 1024px) {
     .about {
         min-height: 100vh;
