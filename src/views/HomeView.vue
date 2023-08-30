@@ -66,7 +66,7 @@ if (!test) {
         <div><img src="@/assets/icon/deposit_icon.svg" alt=""></div>
         <div class="text-gray fs-12 mt-2">Deposit</div>
       </router-link>
-      <router-link to="/wellcome">
+      <router-link to="/withdraw">
         <div><img src="@/assets/icon/withdraw_icon.svg" alt=""></div>
         <div class="text-gray fs-12 mt-2">Withdraw</div>
       </router-link>
@@ -74,10 +74,10 @@ if (!test) {
         <div><img src="@/assets/icon/history_icon.svg" alt=""></div>
         <div class="text-gray fs-12 mt-2 ">History</div>
       </router-link>
-      <div>
+      <router-link to="/wellcome">
         <div><img src="@/assets/icon/personal_icon.svg" alt=""></div>
         <div class="text-gray fs-12 mt-2">Personal</div>
-      </div>
+      </router-link>>
     </div>
     <div class="mt-3">
       <div class="fs-20 text-gray text-start ms-3">ALL</div>

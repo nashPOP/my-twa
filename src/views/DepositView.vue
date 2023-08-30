@@ -20,7 +20,8 @@
             </div>
         </div>
         <div class="px-3 mb-3">
-            <div @click="changePageType('stakeConfirm')" class="bg-skyblue fs-16 w-100 text-center border-radius-10 py-2">
+            <div @click="changePageType('stakeConfirm')"
+                class="bg-skyblue fs-16 w-100 text-center border-radius-10 py-2 cursor-pointer">
                 STAKE
             </div>
         </div>
@@ -65,8 +66,9 @@
                 </div>
                 <div class="col-6">
                     <div class="mx-2">
-                        <router-link to="/SignIn"><button class="btn bg-lightblack3 w-100">Manual
-                                Verify</button></router-link>
+                        <router-link to="/SignIn"><button class="btn bg-lightblack3 w-100">
+                                Manual Verify</button>
+                        </router-link>
                     </div>
                 </div>
             </div>
