@@ -77,7 +77,7 @@ if (!test) {
       <router-link to="/wellcome">
         <div><img src="@/assets/icon/personal_icon.svg" alt=""></div>
         <div class="text-gray fs-12 mt-2">Personal</div>
-      </router-link>>
+      </router-link>
     </div>
     <div class="mt-3">
       <div class="fs-20 text-gray text-start ms-3">ALL</div>
