@@ -1,14 +1,3 @@
-<script setup lang="ts">
-
-import { BackButton } from '@twa.js/sdk';
-import { inject } from "vue"
-const test = inject("test");
-if (!test) {
-
-  const backbutton = new BackButton("6.2");
-  backbutton.hide()
-}
-</script>
 <template>
   <div class="text-center py-3">
     <router-link style="position: absolute;right: 10px; top: 10px;" to="/ring">
@@ -74,7 +63,7 @@ if (!test) {
         <div><img src="@/assets/icon/history_icon.svg" alt=""></div>
         <div class="text-gray fs-12 mt-2 ">History</div>
       </router-link>
-      <router-link to="/wellcome">
+      <router-link to="/personal">
         <div><img src="@/assets/icon/personal_icon.svg" alt=""></div>
         <div class="text-gray fs-12 mt-2">Personal</div>
       </router-link>
@@ -117,6 +106,19 @@ if (!test) {
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+
+import { BackButton } from '@twa.js/sdk';
+import { inject } from "vue"
+const test = inject("test");
+if (!test) {
+
+  const backbutton = new BackButton("6.2");
+  backbutton.hide()
+}
+</script>
+
 <style>
 a {
   text-decoration: none;

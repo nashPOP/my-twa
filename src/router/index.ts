@@ -12,66 +12,67 @@ const router = createRouter({
     {
       path: '/ring',
       name: 'ring',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/RingView.vue')
     },
     {
       path: '/signIn',
       name: 'signIn',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/SignInView.vue')
     },
     {
       path: '/history',
       name: 'history',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/HistoryView.vue')
     },
     {
       path: '/wellcome',
       name: 'wellcome',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/WellcomeView.vue')
     },
     {
       path: '/deposit',
       name: 'deposit',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/Deposit/DepositView.vue')
     },
     {
       path: '/depositDone',
       name: 'depositDone',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/Deposit/DepositDoneView.vue')
     },
     {
       path: '/withdraw',
       name: 'withdraw',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/Withdraw/WithdrawView.vue')
     },
     {
       path: '/withdrawDone',
       name: 'withdrawDone',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/Withdraw/WithdrawDone.vue')
+    },
+    {
+      path: '/personal',
+      name: 'personal',
+      component: () => import('../views/Personal/PersonalView.vue')
+    },
+    {
+      path: '/personal/account_info',
+      name: 'account_info',
+      component: () => import('../views/Personal/AccountInfoView.vue')
+    },
+    {
+      path: '/personal/email',
+      name: 'email',
+      component: () => import('../views/Personal/EmailView.vue')
+    },
+    {
+      path: '/personal/address',
+      name: 'address',
+      component: () => import('../views/Personal/AddressView.vue')
+    },
+    {
+      path: '/personal/referral',
+      name: 'referral',
+      component: () => import('../views/Personal/ReferalView.vue')
     },
   ]
 })
