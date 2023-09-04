@@ -9,8 +9,8 @@
                 YOUR Email
             </div>
             <div class="d-flex bg-lightblack5 align-items-center mx-3">
-                <input :class="isEmailPass ? '' : 'shake text-danger'" class="form-control  text-dark" v-model="email"
-                    type="text" placeholder="Email" />
+                <input :class="isEmailPass === false ? 'shake text-danger' : ''" class="form-control  text-dark"
+                    v-model="email" type="text" placeholder="Email" />
                 <div class="me-3" v-if="isEmailVerify">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.5 8.5L5.83176 13.7944C5.91474 13.8958 6.07258 13.8866 6.14322 13.7762L14 1.5"
@@ -31,7 +31,7 @@ import { BackButton } from '@twa.js/sdk';
 import { useRouter } from 'vue-router'
 const test = inject("test");
 const email = ref("");
-const isEmailPass = ref(false);
+const isEmailPass = ref(null);
 
 const pageType = ref("confirm")
 if (!test) {
