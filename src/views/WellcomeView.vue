@@ -39,7 +39,7 @@
                 </div>
                 <div class="col-6">
                     <div class="mx-2">
-                        <router-link to="/SignIn"><button class="btn bg-lightblack3 w-100">Sign Up</button></router-link>
+                        <router-link to="/signUp"><button class="btn bg-lightblack3 w-100">Sign Up</button></router-link>
                     </div>
                 </div>
             </div>
