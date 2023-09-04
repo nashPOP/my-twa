@@ -127,7 +127,6 @@ import 'swiper/css/navigation';
 const modules = [Autoplay, Pagination, Navigation];
 const test = inject("test");
 if (!test) {
-
     const router = useRouter();
     const backbutton = new BackButton("6.2");
 

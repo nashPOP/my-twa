@@ -83,10 +83,10 @@
             </div> -->
             <div class="mt-3">
                 <div class="forgot-box fs-14">
-                    <router-link to="/forgotPassword">
+                    <router-link to="/forgetPassword">
                         <div class="text-gray">Forgot password?</div>
                     </router-link>
-                    <router-link to="/SignUp">
+                    <router-link to="/signUp">
                         <div class="text-gray">Don't have an account? Sign up</div>
                     </router-link>
                 </div>

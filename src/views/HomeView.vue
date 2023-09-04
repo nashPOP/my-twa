@@ -68,6 +68,11 @@
         <div class="text-gray fs-12 mt-2">Personal</div>
       </router-link>
     </div>
+    <div class="mt-2 mx-5">
+      <router-link class="text-dark" to="/wellcome">
+        <div class="btn bg-skyblue w-100">暫時的登入按鈕</div>
+      </router-link>
+    </div>
     <div class="mt-3">
       <div class="fs-20 text-gray text-start ms-3">ALL</div>
       <div class="bg-lightblack5 fs-16  text-start ms-3 me-3 p-3 border-radius-10">

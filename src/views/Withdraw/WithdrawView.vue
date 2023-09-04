@@ -52,7 +52,7 @@ if (!test) {
     if (pageType.value == "stakeConfirm") {
         backbutton.off("click", () => { });
         backbutton.on('click', () => {
-            alert("123");
+
             changePageType("stake")
         })
     } else {
@@ -72,49 +72,3 @@ const changePageType = (val: string) => {
     }
 }
 </script>
-<style>
-.shake {
-    animation: shake 800ms ease-in-out;
-    color: red !important;
-}
-
-@keyframes shake {
-
-    /* 水平抖动，核心代码 */
-    10%,
-    90% {
-        transform: translate3d(-1px, 0, 0);
-    }
-
-    20%,
-    80% {
-        transform: translate3d(+2px, 0, 0);
-    }
-
-    30%,
-    70% {
-        transform: translate3d(-4px, 0, 0);
-    }
-
-    40%,
-    60% {
-        transform: translate3d(+4px, 0, 0);
-    }
-
-    50% {
-        transform: translate3d(-4px, 0, 0);
-    }
-
-    100% {
-        color: var(--dark);
-    }
-}
-
-@media (min-width: 1024px) {
-    .about {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-    }
-}
-</style>

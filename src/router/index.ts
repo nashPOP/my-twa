@@ -74,6 +74,16 @@ const router = createRouter({
       name: 'referral',
       component: () => import('../views/Personal/ReferalView.vue')
     },
+    {
+      path: '/signUp',
+      name: 'signUp',
+      component: () => import('../views/SignUp/SignUpView.vue')
+    },
+    {
+      path: '/forgetPassword',
+      name: 'forgetPassword',
+      component: () => import('../views/ForgetPassword/ForgetPassword.vue')
+    },
   ]
 })
 
