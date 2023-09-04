@@ -31,7 +31,7 @@ import { BackButton } from '@twa.js/sdk';
 import { useRouter } from 'vue-router'
 const test = inject("test");
 const email = ref("");
-const isEmailPass = ref(null);
+const isEmailPass = ref<any>(null);
 
 const pageType = ref("confirm")
 if (!test) {
