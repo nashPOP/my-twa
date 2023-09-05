@@ -7,7 +7,7 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   // root: path.resolve(__dirname, 'src'),
-  base:"/my-twa/",
+  base: "/my-twa/",
   plugins: [vue()],
   resolve: {
     alias: {

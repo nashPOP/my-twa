@@ -1,5 +1,5 @@
 <template>
-    <div class="px-3 pt-3">
+    <div class="px-2 pt-3">
         <div class="fs-12 text-gray">Your email</div>
         <div class="fs-16 bg-lightblack5 border-radius-10 p-3 mt-3">yft0061@0061@gmail.com</div>
         <div class="fs-12 text-gray">Can't change.</div>
