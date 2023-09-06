@@ -1,11 +1,12 @@
 <script setup >
-// import { echarts } from "@/utils/echarts.js"; // 按需引入echarts
+import { echarts } from "@/utils/echarts"; // 按需引入echarts
 import { provide } from 'vue';
 import { onMounted } from 'vue';
 import { RouterView } from 'vue-router'
 import WalletModal from "@/components/WalletModal.vue"
 
-provide('test', false)
+provide('test', true)
+provide("echarts", echarts); // 提供全局使用
 onMounted(() => {
   document.documentElement.setAttribute("data-theme", "dark");
 

@@ -97,14 +97,14 @@
           <div><img class="me-2" src="@/assets/icon/tonstake_icon_white.svg">Your total balance</div>
           <div>+0.000
             <img class="ms-2" src="@/assets/icon/toncoin_icon.svg">
-            <img class="ms-2" src="@/assets/icon/right_arrow.svg">
+            <router-link to="/totalBlance"> <img class="ms-2" src="@/assets/icon/right_arrow.svg"></router-link>
           </div>
         </div>
         <div class="d-flex justify-content-between align-items-center mt-3">
           <div><img class="me-2" src="@/assets/icon/ticket_icon.svg">Your Reward</div>
           <div>+0.000
             <img class="ms-2" src="@/assets/icon/toncoin_icon.svg">
-            <router-link to="/history"><img class="ms-2" src="@/assets/icon/right_arrow.svg"></router-link>
+            <router-link to="/totalReward"><img class="ms-2" src="@/assets/icon/right_arrow.svg"></router-link>
           </div>
         </div>
       </div>
@@ -113,7 +113,6 @@
 </template>
 
 <script setup lang="ts">
-
 import { BackButton } from '@twa.js/sdk';
 import { inject } from "vue"
 const test = inject("test");
@@ -122,6 +121,7 @@ if (!test) {
   const backbutton = new BackButton("6.2");
   backbutton.hide()
 }
+
 </script>
 
 <style>
