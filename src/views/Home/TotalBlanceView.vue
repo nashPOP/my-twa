@@ -54,7 +54,6 @@ import MyChart from "@/components/MyCharts.vue"
 import { ref, inject } from "vue";
 import { BackButton } from '@twa.js/sdk';
 import { useRouter } from 'vue-router'
-// import echarts from "echarts"
 
 const test = inject("test");
 const echarts = inject<any>("echarts");

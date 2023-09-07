@@ -71,6 +71,7 @@ if (!test) {
         router.back();
     })
     backbutton.show()
+
 }
 
 const option = ref({
@@ -130,7 +131,7 @@ const option = ref({
             type: "line",
             areaStyle: {
                 opacity: 1,
-                color: echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
                     {
                         offset: 0,
                         color: "#69B0F950",
