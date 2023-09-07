@@ -5,7 +5,7 @@ import { onMounted } from 'vue';
 import { RouterView } from 'vue-router'
 import WalletModal from "@/components/WalletModal.vue"
 
-provide('test', true)
+provide('test', false)
 provide("echarts", echarts); // 提供全局使用
 onMounted(() => {
   document.documentElement.setAttribute("data-theme", "dark");
