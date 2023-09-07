@@ -3,6 +3,7 @@ import * as echarts from "echarts/core";
 
 // Import chart modules, where the suffix for chart modules is Chart
 import { BarChart, LineChart, GaugeChart } from "echarts/charts";
+import 'echarts/lib/component/dataZoom'
 
 // Import components for tooltip, title, grid, dataset, and data transformation.
 import {
