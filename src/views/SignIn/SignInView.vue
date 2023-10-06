@@ -76,7 +76,7 @@
             <div class="text-dark t fs-20 fw-bold">Sign in</div>
             <input class="form-control my-3" type="text" placeholder="Email" />
             <input class="form-control my-3" type="password" placeholder="Password" />
-            <button class="bg-skyblue fs-14">SIGN IN</button>
+            <router-link to="signInSuccess"><button class="bg-skyblue fs-14">SIGN IN</button></router-link>
             <!-- <div class="text-danger py-2 text-start">
                 * Account or password is wrong,
                 Please retry.
