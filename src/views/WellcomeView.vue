@@ -60,10 +60,9 @@ const WebApp = inject("WebApp")
 if (!test) {
     const router = useRouter();
     WebApp.BackButton.show();
-    WebApp.BackButton.on('click', () => {
+    WebApp.BackButton.onClick('backButtonClicked', () => {
         router.back();
     })
-    WebApp.BackButton.show()
 
 }
 const openWalletModal = () => {
