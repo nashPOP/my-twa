@@ -8,7 +8,6 @@ import WebApp from '@twa-dev/sdk'
 
 provide('test', false)
 provide("echarts", echarts); // 提供全局使用
-provide("WebApp", WebApp); // 提供全局使用
 onMounted(() => {
   document.documentElement.setAttribute("data-theme", "dark");
   WebApp.showAlert(`Hello World! Current count is 1111`)

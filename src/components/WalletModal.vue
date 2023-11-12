@@ -72,6 +72,7 @@ import { isMobile } from "is-mobile";
 const walletsList = ref([]);
 const isMobileVal = ref(false);
 const qrCodeLink = ref("");
+import WebApp from '@twa-dev/sdk'
 
 onMounted(async () => {
     isMobileVal.value = isMobile();
@@ -114,7 +115,7 @@ const connectWallet = async (
         });
         qrCodeLink.value = showuniversalLink;
         closeModal("walletSwitchModal");
-        if (!isMobileVal.value) {
+        if (WebApp.platform == "tdesktop") {
             openModal("QrCodeModal");
         } else {
             window.open(qrCodeLink.value, "_self", "noreferrer noopener");
