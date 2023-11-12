@@ -60,7 +60,7 @@ const WebApp = inject("WebApp")
 if (!test) {
     const router = useRouter();
     WebApp.BackButton.show();
-    WebApp.BackButton.onClick('backButtonClicked', () => {
+    WebApp.BackButton.onClick(() => {
         router.back();
     })
 

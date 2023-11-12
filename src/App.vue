@@ -11,7 +11,7 @@ provide("echarts", echarts); // 提供全局使用
 provide("WebApp", WebApp); // 提供全局使用
 onMounted(() => {
   document.documentElement.setAttribute("data-theme", "dark");
-  WebApp.showAlert(`Hello World! Current count is 123`)
+  WebApp.showAlert(`Hello World! Current count is 1111`)
   console.log(WebApp.platform);
 })
 </script>
