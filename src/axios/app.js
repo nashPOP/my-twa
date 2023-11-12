@@ -1,9 +1,6 @@
 import axios from "axios";
-
-
-
 const backend_new = axios.create({
-  baseURL: "https://devapi.tonstake.com",
+  baseURL: "https://testnet-api.tonstake.com",
 });
 
 

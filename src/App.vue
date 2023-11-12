@@ -4,12 +4,15 @@ import { provide } from 'vue';
 import { onMounted } from 'vue';
 import { RouterView } from 'vue-router'
 import WalletModal from "@/components/WalletModal.vue"
+import WebApp from '@twa-dev/sdk'
 
 provide('test', false)
 provide("echarts", echarts); // 提供全局使用
+provide("WebApp", WebApp); // 提供全局使用
 onMounted(() => {
   document.documentElement.setAttribute("data-theme", "dark");
-
+  WebApp.showAlert(`Hello World! Current count is 123`)
+  console.log(WebApp.platform);
 })
 </script>
 
