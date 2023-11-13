@@ -113,13 +113,12 @@
 </template>
 
 <script setup lang="ts">
-import { BackButton } from '@twa.js/sdk';
 import { inject } from "vue"
+import WebApp from '@twa-dev/sdk'
+
 const test = inject("test");
 if (!test) {
-
-  const backbutton = new BackButton("6.2");
-  backbutton.hide()
+  WebApp.BackButton.hide()
 }
 
 </script>

@@ -74,9 +74,9 @@
 
 <script setup lang="ts">
 import { computed, ref, watch } from "vue";
-import { BackButton } from '@twa.js/sdk';
 import { useRouter } from 'vue-router'
 import { inject } from "vue"
+import WebApp from '@twa-dev/sdk'
 const test = inject("test");
 const email = ref("");
 const isTermsAgree = ref(false);
@@ -86,12 +86,11 @@ const emailMsg = ref("");
 const referralCode = ref("");
 if (!test) {
     const router = useRouter();
-    const backbutton = new BackButton("6.2");
-    backbutton.show();
-    backbutton.on('click', () => {
+    WebApp.BackButton.show();
+    WebApp.BackButton.onClick(() => {
         router.back();
     })
-    backbutton.show()
+    WebApp.BackButton.show()
 
 }
 const isEmailVerify = computed(() => {

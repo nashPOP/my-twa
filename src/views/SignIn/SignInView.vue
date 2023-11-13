@@ -100,7 +100,7 @@
 import { useRouter } from 'vue-router'
 import { inject } from "vue"
 const test = inject("test");
-const WebApp: any = inject("WebApp")
+import WebApp from '@twa-dev/sdk'
 
 if (!test) {
     const router = useRouter();

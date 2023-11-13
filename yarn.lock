@@ -164,34 +164,6 @@
   resolved "https://registry.npmjs.org/@twa-dev/types/-/types-6.9.0.tgz"
   integrity sha512-hBkIuJgVtkLAPPhKsNfgyBpgS+15spzUScy5jgpfPJPqXPaaUVDTaWHbeEUU+lUgHmryeQjWyz+UjS7987Pyaw==
 
-"@twa.js/bridge@1.1.1":
-  version "1.1.1"
-  resolved "https://registry.npmjs.org/@twa.js/bridge/-/bridge-1.1.1.tgz"
-  integrity sha512-W2r8LLpG8UGjquPX73Ca0g1yzHuqr7jBCzasqiU9ALtXwKkLx3F8qocu4cfnx8XgF1iKgtorkestsgjXl2n2Gw==
-  dependencies:
-    "@twa.js/utils" "0.3.0"
-
-"@twa.js/init-data@0.2.9":
-  version "0.2.9"
-  resolved "https://registry.npmjs.org/@twa.js/init-data/-/init-data-0.2.9.tgz"
-  integrity sha512-d3HZiBTqWBNqB+J1bVGRmJJF9NfO+fKuVnqXciijbtKgu4Bg6gQdIZFMlhtA2GT7BRu0qBUYN/AJozZfRqXVWg==
-  dependencies:
-    "@twa.js/utils" "0.3.0"
-
-"@twa.js/sdk@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.npmjs.org/@twa.js/sdk/-/sdk-0.7.0.tgz"
-  integrity sha512-aYA9mH9nXVOHjXqA+6CZY8T4W9nhoPXaJ9HLT3jpy3U5q7UzWqEMeTxvLWWnWpf5BvQ06Vwezwo/LhoC6CDPow==
-  dependencies:
-    "@twa.js/bridge" "1.1.1"
-    "@twa.js/init-data" "0.2.9"
-    "@twa.js/utils" "0.3.0"
-
-"@twa.js/utils@0.3.0":
-  version "0.3.0"
-  resolved "https://registry.npmjs.org/@twa.js/utils/-/utils-0.3.0.tgz"
-  integrity sha512-sd/2EEPEsdeDX1hKIfl+21w5J/2bFvnk307aF4KCHvN4oeo29OgrBLcYy/biH/XxHXS97G8ViCpFlRDy091gjg==
-
 "@types/json-schema@^7.0.9":
   version "7.0.12"
   resolved "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.12.tgz"

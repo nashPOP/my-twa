@@ -52,19 +52,18 @@
 <script setup lang="ts">
 import MyChart from "@/components/MyCharts.vue"
 import { ref, inject } from "vue";
-import { BackButton } from '@twa.js/sdk';
 import { useRouter } from 'vue-router'
+import WebApp from '@twa-dev/sdk'
 
 const test = inject("test");
 const echarts = inject<any>("echarts");
 if (!test) {
     const router = useRouter();
-    const backbutton = new BackButton("6.2");
-    backbutton.show();
-    backbutton.on('click', () => {
+    WebApp.BackButton.show();
+    WebApp.BackButton.onClick(() => {
         router.back();
     })
-    backbutton.show()
+    WebApp.BackButton.show()
 
 }
 

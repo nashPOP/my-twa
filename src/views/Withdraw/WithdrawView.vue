@@ -37,27 +37,25 @@
 
 <script setup lang="ts">
 import { ref } from "vue"
-import { BackButton } from '@twa.js/sdk';
 import { useRouter } from 'vue-router'
 import { inject } from "vue"
+import WebApp from '@twa-dev/sdk'
 const test = inject("test");
 const userAmount = ref(1234);
 const stakeAmount = ref(0);
 const isStakeAmountPass = ref(true);
 const pageType = ref("stakePage")
 const router = useRouter();
-const backbutton = new BackButton("6.2");
 if (!test) {
-    backbutton.show();
+    WebApp.BackButton.show();
     if (pageType.value == "stakeConfirm") {
-        backbutton.off("click", () => { });
-        backbutton.on('click', () => {
-
+        WebApp.BackButton.offClick(() => { });
+        WebApp.BackButton.onClick(() => {
             changePageType("stake")
         })
     } else {
-        backbutton.off("click", () => { });
-        backbutton.on('click', () => {
+        WebApp.BackButton.offClick(() => { });
+        WebApp.BackButton.onClick(() => {
             router.back();
         })
     }

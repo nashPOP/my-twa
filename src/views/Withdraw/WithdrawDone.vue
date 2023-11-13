@@ -7,18 +7,18 @@
 </template>
 <script setup lang="ts">
 import CongratsView from "@/components/CongratsView.vue"
-import { BackButton } from '@twa.js/sdk';
 import { useRouter } from 'vue-router'
 import { inject } from "vue"
+import WebApp from '@twa-dev/sdk'
+
 const test = inject("test");
 if (!test) {
     const router = useRouter();
-    const backbutton = new BackButton("6.2");
-    backbutton.show();
-    backbutton.on('click', () => {
+    WebApp.BackButton.show();
+    WebApp.BackButton.onClick(() => {
         router.push("/")
     })
-    backbutton.show()
+    WebApp.BackButton.show()
 
 }
 </script>
